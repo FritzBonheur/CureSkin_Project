@@ -10,7 +10,6 @@ driver_path = ChromeDriverManager().install()
 # create a new Chrome browser instance
 service = Service(driver_path)
 driver = webdriver.Chrome(service=service)
-driver.maximize_window()
 
 # open the url
 driver.get('https://www.amazon.com/')
@@ -37,7 +36,7 @@ driver.find_element(By.ID, 'ap-other-signin-issues-link')
 driver.find_element(By.ID, 'createAccountSubmit')
 
 # *Conditions of use link
-driver.find_element(By.ID, "//a[contains(@href, 'ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088')]")
+driver.find_element(By.XPATH, "//a[contains(@href, 'ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088')]")
 
 # *Privacy Notice Link
-driver.find_element(By.ID, "//a[contains(@href, 'ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496')]")
+driver.find_element(By.XPATH, "//a[contains(@href, 'ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496')]")
