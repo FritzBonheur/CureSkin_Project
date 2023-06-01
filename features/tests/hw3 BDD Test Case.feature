@@ -5,4 +5,5 @@ Feature: Amazon Sign In Page tests
   Scenario: User can see Sign In Page
     Given Open amazon main page
     When Click on Returns&Orders
-    Then Verify elements are present
+    When Verify Email field is present
+    Then Verify elements are present for Sign in
