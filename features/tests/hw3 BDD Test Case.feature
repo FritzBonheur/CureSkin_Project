@@ -7,4 +7,4 @@ Feature: Amazon Sign In Page tests
     When Click on Returns&Orders
     When Verify Email field is present
     Then Verify elements are present for Sign in
-    
+

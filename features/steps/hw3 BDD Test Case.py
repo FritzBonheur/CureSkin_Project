@@ -18,3 +18,5 @@ def verify_elements_are_present(context, expected_result):
     actual_result = context.driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']").text
     assert expected_result == actual_result, f'Error! Expected {expected_result} but got actual {actual_result}'
 
+
+
