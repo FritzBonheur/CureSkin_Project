@@ -1,4 +1,4 @@
-# Careerist Test Automation repository
+# CureSkin Project
 written in
 ### Python 3, Behave
-https://www.careerist.com/automation
+https://www.cureskin.com/
