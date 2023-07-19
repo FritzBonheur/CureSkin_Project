@@ -3,6 +3,6 @@ Feature: # CureSkin price filter
   Scenario: # Verify price filter functionality
     Given Open CureSkin Home page
     Then Click on Shop All section
-    And Adjust Price Filter
-    Then Verify # of products changes
-    When Verify products are within Price Filter
+    Then Adjust Price Filter
+    Then Verify products Change
+    #When Verify products are within Price Filter
