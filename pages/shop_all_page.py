@@ -5,9 +5,12 @@ from time import sleep
 
 
 class ShopAllPage(Page):
+
     LOWER = (By.XPATH, "//div[@class='price-range__thumbs is-lower']")
     UPPER = (By.XPATH, "//div[@class='price-range__thumbs is-upper']")
     PRODUCT = (By.XPATH, "//a[contains(text(), 'Vitamin ABC Cream')]")
+    PRICE = (By.XPATH, "//span[@class='price-item price-item--sale']/price-money/bdi")
+
     def adjust_price_filter(self):
         action = ActionChains(self.driver)
         action.click_and_hold(self.wait_for_element_appear(*self.LOWER)) \
@@ -21,11 +24,10 @@ class ShopAllPage(Page):
             .move_by_offset(-20, 0) \
             .release() \
             .perform()
-        sleep(5)
+        sleep(2)
 
     def verify_products_change(self):
         self.find_element(*self.PRODUCT)
 
-
     def verify_products_within_price_filter(self):
-        self.find_element()
+        self.find_element(*self.PRICE)

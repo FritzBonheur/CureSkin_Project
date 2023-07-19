@@ -5,4 +5,4 @@ Feature: # CureSkin price filter
     Then Click on Shop All section
     Then Adjust Price Filter
     Then Verify products Change
-    #When Verify products are within Price Filter
+    When Verify products are within Price Filter
